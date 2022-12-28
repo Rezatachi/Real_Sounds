@@ -1,6 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
+import theme from './theme';
 
+// imported components
+import Auth from './components/Auth';
 import Search from './components/Search';
 function App() {
   const [token, setToken] = useState(null);
@@ -33,9 +37,10 @@ function App() {
   }, [token]);
  
   return (
-    <div>
+   <ChakraProvider theme={theme}>
+    <ColorModeScript initialColorMode={theme.config.initialColorMode}/>
       {!token ? 
-        <a href={`${process.env.REACT_APP_AUTH_ENDPOINT}?client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_REDIRECT_URI}&response_type=${process.env.REACT_APP_RESPONSE_TYPE}`}>Login to Spotify</a>
+        <Auth />
       : <>
       {/* <Search token={token} /> */}
       <Search token={token} />
@@ -43,8 +48,7 @@ function App() {
       <button onClick={logout}>Logout</button>
       </>
       }
-       
-    </div>
+    </ChakraProvider>
   );
 }
 
