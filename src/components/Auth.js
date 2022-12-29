@@ -30,7 +30,12 @@ const Auth = () => {
             This is a simple app that allows you to search for artists on
             Spotify.
           </Text>
-          <motion.div style={{ width: "100%" }} initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 0.3}}>
+          <motion.div
+            style={{ width: "100%" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          >
             <Button
               width={"100%"}
               colorScheme={"blue"}

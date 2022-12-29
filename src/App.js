@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import { ChakraProvider, ColorModeScript, Button} from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript} from "@chakra-ui/react";
 import theme from './theme';
 import {Route, Routes} from 'react-router-dom';
 // imported components
 import Auth from './components/Auth';
 import Search from './components/Search';
+import Nav from './components/Nav';
 function App() {
 
   const [token, setToken] = useState(null);
@@ -45,7 +46,7 @@ function App() {
       {!token ? 
         <Auth />
       : <>
-      <Button onClick={logout}>Logout</Button>
+      <Nav logout={logout} currentUser={currentUser}/>
       <Routes>
         <Route path="/" element={<Search token={token}/>}/>
       </Routes>
