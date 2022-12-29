@@ -1,6 +1,6 @@
 // use chakraui dark mode
 
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme} from '@chakra-ui/react'
 
 // 2. Add your color mode config
 const config = {

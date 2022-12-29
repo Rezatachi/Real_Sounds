@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript, Button} from "@chakra-ui/react";
 import theme from './theme';
-
+import {Route, Routes} from 'react-router-dom';
 // imported components
 import Auth from './components/Auth';
 import Search from './components/Search';
 function App() {
+
   const [token, setToken] = useState(null);
   const [currentUser, setCurrentUser] = useState(null);
   useEffect(() => {
@@ -35,17 +36,20 @@ function App() {
       })
     }
   }, [token]);
+  
  
+
   return (
    <ChakraProvider theme={theme}>
     <ColorModeScript initialColorMode={theme.config.initialColorMode}/>
       {!token ? 
         <Auth />
       : <>
-      {/* <Search token={token} /> */}
-      <Search token={token} />
-      <p>{currentUser}</p>
-      <button onClick={logout}>Logout</button>
+      <Button onClick={logout}>Logout</Button>
+      <Routes>
+        <Route path="/" element={<Search token={token}/>}/>
+      </Routes>
+      
       </>
       }
     </ChakraProvider>
