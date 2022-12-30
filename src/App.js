@@ -7,6 +7,7 @@ import {Route, Routes} from 'react-router-dom';
 import Auth from './components/Auth';
 import Search from './components/Search';
 import Nav from './components/Nav';
+import TopTracks from './components/TopTracks';
 function App() {
 
   const [token, setToken] = useState(null);
@@ -49,6 +50,7 @@ function App() {
       <Nav logout={logout} currentUser={currentUser}/>
       <Routes>
         <Route path="/" element={<Search token={token}/>}/>
+        <Route path="/top-tracks" element={<TopTracks token={token}/>}/>
       </Routes>
       
       </>

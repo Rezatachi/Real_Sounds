@@ -1,0 +1,1 @@
+// make a landing page after the user logs in. Tell them what you can do in the app. add some cool designs

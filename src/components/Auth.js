@@ -3,7 +3,7 @@ import React from "react";
 // use chalkra ui for the landing page
 import { Button, Flex, Heading, Text } from "@chakra-ui/react";
 // import github logo
-import { FaGithub } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Auth = () => {
@@ -40,7 +40,7 @@ const Auth = () => {
               width={"100%"}
               colorScheme={"blue"}
               onClick={() => {
-                window.location.href = `${process.env.REACT_APP_AUTH_ENDPOINT}?client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_REDIRECT_URI}&response_type=${process.env.REACT_APP_RESPONSE_TYPE}`;
+                window.location.href = `${process.env.REACT_APP_AUTH_ENDPOINT}?client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_REDIRECT_URI}&response_type=${process.env.REACT_APP_RESPONSE_TYPE}&scope=${process.env.REACT_APP_SCOPES_LIST}`;
               }}
             >
               Login to Spotify
@@ -60,9 +60,9 @@ const Auth = () => {
           {/* make is centered and horizontla */}
           <Flex align={"center"} justify={"center"}>
             <Text fontSize={24} fontWeight="semibold" mr={2} color="white">
-              Made with
+              Made with 
             </Text>
-            <FaGithub color={"white"} size={35} />
+            <FaHeart color="red" size={30} />
           </Flex>
         </Flex>
       </Flex>
