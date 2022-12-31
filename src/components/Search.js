@@ -56,7 +56,7 @@ const Search = ({ token }) => {
                 onChange={(e) => setSearchKey(e.target.value)}
                 mr={2}
               />
-              <Button colorScheme={"blue"} type="submit">
+              <Button colorScheme="gray" type="submit">
                 <FaSearch />
               </Button>
             </form>
@@ -65,7 +65,7 @@ const Search = ({ token }) => {
       {/* Make a big grid then make a smaller grid for each mapping */}
       {/* center the grid in the midle */}
       <Flex justify={"center"}>
-        <Grid templateColumns="repeat(4, 1fr)" gap={20} p={5}>
+        <Grid templateColumns="repeat(4, 1fr)" gap={10} p={5}>
         {artists.map((artist, index) => (
             <GridItem key={artist.id}>
                 <a href={artist.external_urls.spotify}>

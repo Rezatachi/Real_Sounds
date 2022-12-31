@@ -6,11 +6,11 @@ const Nav = ({logout, currentUser}) => {
     return (
         <Flex justifyContent="space-between" alignItems="center" p={5} bg={"gray.800"}>
             <Flex alignItems="center" ml={4}>
-                <Link to="/">
-                    <Button colorScheme="messenger">Search</Button>
+                <Link to="/search">
+                    <Button colorScheme="gray">Search</Button>
                 </Link>
                 <Link to="/top-tracks">
-                    <Button colorScheme="messenger" ml={4}>Top Tracks</Button>
+                    <Button colorScheme="gray" ml={4}>Top Tracks</Button>
                 </Link>
             </Flex>
             <Flex justifyContent="space-around" alignItems="center" minW={"300px"}>
