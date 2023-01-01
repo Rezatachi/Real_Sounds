@@ -108,9 +108,15 @@ const TopTracks = ({ token }) => {
             <GridItem key={index}>
               <Box
                 maxW={"sm"}
-                borderWidth="1px"
+                borderWidth="2px"
                 borderRadius="lg"
                 overflow="hidden"
+                borderColor="gray.500"
+                    _hover={{
+                        borderColor: "white",
+                    }
+                }
+                    transition="all 0.2s"
               >
                 <Image
                   src={track.album.images[0].url}

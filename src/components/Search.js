@@ -57,7 +57,7 @@ const Search = ({ token }) => {
                 mr={2}
               />
               <Button colorScheme="gray" type="submit">
-                <FaSearch />
+                <FaSearch color="black"/>
               </Button>
             </form>
           </FormControl>
