@@ -62,7 +62,7 @@ const TopTracks = ({ token }) => {
         </Text>
         <Flex flex={"right"}>
           <Button
-            colorScheme="teal"
+            colorScheme="gray"
             variant="outline"
             size="lg"
             m={1}
@@ -73,7 +73,7 @@ const TopTracks = ({ token }) => {
             <Text>All Time</Text>
           </Button>
           <Button
-            colorScheme="teal"
+            colorScheme="gray"
             variant="outline"
             size="lg"
             m={1}
@@ -84,7 +84,7 @@ const TopTracks = ({ token }) => {
             <Text>6 Months</Text>
           </Button>
           <Button
-            colorScheme="teal"
+            colorScheme="gray"
             variant="outline"
             size="lg"
             m={1}
@@ -163,9 +163,9 @@ const TopTracks = ({ token }) => {
                     ): (<Box p={1}>
                     <Button colorScheme="teal" variant="outline" size="sm" onClick={() => playAudio(track.preview_url)}>
                       {playing && currentPreviewUrl === track.preview_url ? (
-                        <FaPause />
+                        <FaPause color="white"  />
                       ) : (
-                        <FaPlay />
+                        <FaPlay color="white" />
                       )}
                     
                     </Button>
