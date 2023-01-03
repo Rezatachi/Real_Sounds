@@ -2,8 +2,6 @@ import React from "react";
 // make a landing page for the user to login to spotify
 // use chalkra ui for the landing page
 import { Button, Flex, Heading, Text } from "@chakra-ui/react";
-// import github logo
-import { FaHeart } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Auth = () => {
@@ -58,13 +56,7 @@ const Auth = () => {
           justify={"center"}
         >
           {/* make is centered and horizontla */}
-          <Flex align={"center"} justify={"center"}>
-            <Text fontSize={24} fontWeight="semibold" mr={2} color="white">
-              Made with 
-            </Text>
-            <FaHeart color="red" size={30} />
-          </Flex>
-        </Flex>
+      </Flex>
       </Flex>
     </>
   );

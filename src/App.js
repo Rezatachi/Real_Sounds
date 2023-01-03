@@ -55,7 +55,6 @@ function App() {
         <Route path="/search" element={<Search token={token}/>}/>
         <Route path="/top-tracks" element={<TopTracks token={token}/>}/>
       </Routes>
-      
       </>
       }
     </ChakraProvider>

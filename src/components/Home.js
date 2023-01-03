@@ -1,8 +1,7 @@
-import { Button, Flex, Heading, Text } from "@chakra-ui/react";
+import {Flex, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import React, {useRef, useEffect} from "react";
-
-
+import React from "react";
+import {FaGithub} from "react-icons/fa";
 const Landing = () => {
     
   // make a cool landing page
@@ -40,11 +39,15 @@ const Landing = () => {
         <Text fontSize={"lg"} color={"white"} fontWeight="600" margin={2}>
             We made this app to help you find the best music. Using Spotify's API, we developed a way to find the best music each day as well as the best music of all time. We hope you enjoy! Feel free to see our code on Github and contact us with any questions or comments.
         </Text>
+        <Text fontSize={24} fontWeight="semibold" mr={2} color="white">
+              Made with 
+            </Text>
+          <FaGithub color="white" size={30} />
       </Flex>
       {/* use the ReactPlayer component to play the video */}
       {/* create a moving gradient background */}
         
-
+    
      </Flex>
     );
   };
