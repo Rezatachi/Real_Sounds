@@ -47,16 +47,6 @@ const Auth = () => {
         </Flex>
         {/* footer for logo */}
         {/* center a flex on the bottom part of the screen  */}
-        <Flex
-          position={"absolute"}
-          bottom={0}
-          w={"100%"}
-          h={"10vh"}
-          align={"center"}
-          justify={"center"}
-        >
-          {/* make is centered and horizontla */}
-      </Flex>
       </Flex>
     </>
   );

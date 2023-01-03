@@ -9,6 +9,7 @@ import Search from './components/Search';
 import Nav from './components/Nav';
 import TopTracks from './components/TopTracks';
 import Landing from './components/Home';
+import ArtistOfTheDay from './components/ArtistOfTheDay';
 function App() {
 
   const [token, setToken] = useState(null);
@@ -50,10 +51,10 @@ function App() {
       : <>
       <Nav logout={logout} currentUser={currentUser}/>
       <Routes>
-
-        <Route path="/" element={<Landing/>}/>
+        <Route path="/" element={<Landing token={token}/>}/>
         <Route path="/search" element={<Search token={token}/>}/>
         <Route path="/top-tracks" element={<TopTracks token={token}/>}/>
+        <Route path="/artist-of-the-day" element={<ArtistOfTheDay token={token}/>}/>
       </Routes>
       </>
       }
