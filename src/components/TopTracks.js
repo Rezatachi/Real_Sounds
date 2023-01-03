@@ -146,17 +146,41 @@ const TopTracks = ({ token }) => {
                     {track.name + " "}
                   </Box>
                   <Box>
-                    {track.artists.map((artist, index) => {
-                      return (
+                    {/* if track artist length is > 1, write "and" betwen the artists. Else just write one */}
+                    {track.artists.length > 1 ? (
+                      <Text fontSize="sm">
+                        {track.artists.map((artist, index) => {
+                          return (
+                            <Link
+                              key={index}
+                              href={artist.external_urls.spotify}
+                              isExternal
+                            >
+                              {artist.name}
+                              {index === track.artists.length - 1 ? (
+                                ""
+                              ) : (
+                                <Text as="span" color="white">
+                                  {" "}
+                                  and{" "}
+                                </Text>
+                              )}
+                            </Link>
+                          );
+                        })}
+                      </Text>
+                    ) : (
+                      <Text fontSize="sm">
                         <Link
-                          key={index}
-                          href={artist.external_urls.spotify}
+
+                          href={track.artists[0].external_urls.spotify}
                           isExternal
                         >
-                          {artist.name}
+                          {track.artists[0].name}
                         </Link>
-                      );
-                    })}
+                      </Text>
+                    )}
+
                   </Box>
                   {!track.preview_url ? (
                     <Box p={1}></Box>
